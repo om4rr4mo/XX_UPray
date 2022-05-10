@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/home.dart';
+import 'package:flutter_application_1/pages/impostazioni.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,13 +12,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'UPray',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      home: MyBasePage(
+        title: 'Flutter Demo Home Page',
       ),
-      home: const MyBasePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -33,11 +33,11 @@ class MyBasePage extends StatefulWidget {
 class _MyBasePageState extends State<MyBasePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SafeArea(
-        minimum: const EdgeInsets.all(16.0),
+        minimum: EdgeInsets.all(16.0),
         bottom: false,
-        child: Home(),
+        child: Impostazioni(),
       ),
     );
   }
