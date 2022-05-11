@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/static_files/variables.dart';
 
-class MadhabExpanded extends StatefulWidget {
-  const MadhabExpanded({Key? key}) : super(key: key);
+class LanguageExpanded extends StatefulWidget {
+  const LanguageExpanded({Key? key}) : super(key: key);
 
   @override
-  State<MadhabExpanded> createState() => _MadhabExpandedState();
+  State<LanguageExpanded> createState() => _LanguageExpandedState();
 }
 
-class _MadhabExpandedState extends State<MadhabExpanded> {
+class _LanguageExpandedState extends State<LanguageExpanded> {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -18,22 +18,22 @@ class _MadhabExpandedState extends State<MadhabExpanded> {
           children: [
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: MadhabEnum.values.map((MadhabEnum classType) {
+              children: LanguageEnum.values.map((LanguageEnum classType) {
                 return Padding(
                   padding: const EdgeInsets.all(5.0),
                   child: GestureDetector(
                     onTap: () {
                       setState(() {
-                        currentMadhab = classType;
+                        currentLanguage = classType;
                       });
                     },
                     child: AnimatedContainer(
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
-                        border: classType.name == currentMadhab.name
+                        border: classType.name == currentLanguage.name
                             ? null
                             : Border.all(color: Color(0xFF8D4EAC), width: 2),
-                        color: classType.name == currentMadhab.name
+                        color: classType.name == currentLanguage.name
                             ? Color(0xFF8D4EAC)
                             : Color(0x008D4EAC),
                         borderRadius: BorderRadius.circular(20),

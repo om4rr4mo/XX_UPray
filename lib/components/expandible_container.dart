@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/static_files/variables.dart';
 
 class ExpandibleContainer extends StatefulWidget {
   final double collapsedHeight;
@@ -8,6 +7,7 @@ class ExpandibleContainer extends StatefulWidget {
   final Color bgColor;
   final Widget collapsedContent;
   final Widget expandedContent;
+  final double borderRadius;
   bool collapsed;
 
   //gli passiamo la function onTap per gestire il
@@ -16,6 +16,7 @@ class ExpandibleContainer extends StatefulWidget {
 
   ExpandibleContainer(
       {Key? key,
+      required this.borderRadius,
       required this.onTap,
       required this.collapsed,
       required this.collapsedHeight,
@@ -47,7 +48,7 @@ class _ExpandibleContainerState extends State<ExpandibleContainer> {
         width: widget.width,
         decoration: BoxDecoration(
           color: widget.bgColor,
-          borderRadius: BorderRadius.circular(borderRadius),
+          borderRadius: BorderRadius.circular(widget.borderRadius),
         ),
         curve: Curves.fastOutSlowIn,
         child:

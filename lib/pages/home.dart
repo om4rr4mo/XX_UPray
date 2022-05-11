@@ -33,6 +33,7 @@ class _HomeState extends State<Home> {
                   }
                 });
               },
+              borderRadius: bigBorderRadius,
               collapsed: prayerCollapsed,
               collapsedHeight: MediaQuery.of(context).size.height * 0.25,
               expandedHeight: MediaQuery.of(context).size.height * 0.50,
@@ -54,6 +55,7 @@ class _HomeState extends State<Home> {
                   }
                 });
               },
+              borderRadius: bigBorderRadius,
               collapsed: calendarCollapsed,
               collapsedHeight: MediaQuery.of(context).size.height * 0.10,
               expandedHeight: MediaQuery.of(context).size.height * 0.35,
