@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 
 class Button extends StatefulWidget {
   final double distance;
+  final Widget icon;
   final String label;
   final Function() onTap;
 
   const Button(
       {Key? key,
       required this.distance,
+      required this.icon,
       required this.label,
       required this.onTap})
       : super(key: key);
@@ -32,19 +34,25 @@ class _ButtonState extends State<Button> {
         color: const Color(0xFF401C48),
         borderRadius: BorderRadius.circular(10),
       ),
-      child: Center(
-        child: TextButton(
-          child: Text(
-            widget.label,
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              color: Color(0xFFECD7D8),
-              fontSize: 23,
-              fontWeight: FontWeight.bold,
-            ),
+      child: Row(
+        children: [
+          IconButton(
+            onPressed: widget.onTap,
+            icon: widget.icon,
+            color: const Color(0xFFD88090),
           ),
-          onPressed: widget.onTap,
-        ),
+          TextButton(
+            child: Text(
+              widget.label,
+              style: const TextStyle(
+                color: Color(0xFFECD7D8),
+                fontSize: 23,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onPressed: widget.onTap,
+          ),
+        ],
       ),
     );
   }
