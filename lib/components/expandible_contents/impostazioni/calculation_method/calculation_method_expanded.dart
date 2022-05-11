@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/static_files/variables.dart';
 
-class MadhabExpanded extends StatefulWidget {
-  const MadhabExpanded({Key? key}) : super(key: key);
+class CalcMethodExpanded extends StatefulWidget {
+  const CalcMethodExpanded({Key? key}) : super(key: key);
 
   @override
-  State<MadhabExpanded> createState() => _MadhabExpandedState();
+  State<CalcMethodExpanded> createState() => _CalcMethodExpandedState();
 }
 
-class _MadhabExpandedState extends State<MadhabExpanded> {
+class _CalcMethodExpandedState extends State<CalcMethodExpanded> {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -16,24 +16,28 @@ class _MadhabExpandedState extends State<MadhabExpanded> {
         physics: BouncingScrollPhysics(),
         child: Column(
           children: [
+            Text(
+              "seleziona il metodo di calcolo",
+            ),
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: MadhabEnum.values.map((MadhabEnum classType) {
+              children: CalculationMethodEnum.values
+                  .map((CalculationMethodEnum classType) {
                 return Padding(
                   padding: const EdgeInsets.all(5.0),
                   child: GestureDetector(
                     onTap: () {
                       setState(() {
-                        currentMadhab = classType;
+                        currentCalculationMethod = classType;
                       });
                     },
                     child: AnimatedContainer(
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
-                        border: classType.name == currentMadhab.name
+                        border: classType.name == currentCalculationMethod.name
                             ? null
                             : Border.all(color: Color(0xFF8D4EAC), width: 2),
-                        color: classType.name == currentMadhab.name
+                        color: classType.name == currentCalculationMethod.name
                             ? Color(0xFF8D4EAC)
                             : Color(0x008D4EAC),
                         borderRadius: BorderRadius.circular(20),
