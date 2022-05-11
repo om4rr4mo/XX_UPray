@@ -3,7 +3,7 @@ import 'package:flutter_application_1/components/expandible_contents/impostazion
 import 'package:flutter_application_1/static_files/variables.dart';
 
 import '../components/expandible_container.dart';
-import '../components/expandible_contents/impostazioni/madhab/madhab_collapssed.dart';
+import '../components/expandible_contents/impostazioni/madhab/madhab_collapsed.dart';
 
 class Impostazioni extends StatefulWidget {
   const Impostazioni({Key? key}) : super(key: key);
