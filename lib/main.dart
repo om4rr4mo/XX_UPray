@@ -14,7 +14,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'UPray',
       home: MyBasePage(
         title: 'Flutter Demo Home Page',
       ),
@@ -35,9 +34,8 @@ class _MyBasePageState extends State<MyBasePage> {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: SafeArea(
-        minimum: EdgeInsets.all(16.0),
-        bottom: false,
-        child: Impostazioni(),
+        minimum: EdgeInsets.only(left: 16.0, top: 16.0, right: 16.0),
+        child: Home(),
       ),
     );
   }

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class Button extends StatefulWidget {
+class MenuButton extends StatefulWidget {
   final double distance;
-  final Widget icon;
+  final IconData icon;
   final String label;
   final Function() onTap;
 
-  const Button(
+  const MenuButton(
       {Key? key,
       required this.distance,
       required this.icon,
@@ -15,10 +15,10 @@ class Button extends StatefulWidget {
       : super(key: key);
 
   @override
-  _ButtonState createState() => _ButtonState();
+  _MenuButtonState createState() => _MenuButtonState();
 }
 
-class _ButtonState extends State<Button> {
+class _MenuButtonState extends State<MenuButton> {
   @override
   void initState() {
     super.initState();
@@ -26,23 +26,24 @@ class _ButtonState extends State<Button> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 50,
-      margin: EdgeInsets.only(top: widget.distance),
-      width: 324.5,
-      decoration: BoxDecoration(
-        color: const Color(0xFF401C48),
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Row(
-        children: [
-          IconButton(
-            onPressed: widget.onTap,
-            icon: widget.icon,
-            color: const Color(0xFFD88090),
-          ),
-          TextButton(
-            child: Text(
+    return GestureDetector(
+      child: Container(
+        height: 50,
+        margin: EdgeInsets.only(top: widget.distance),
+        width: 324.5,
+        decoration: BoxDecoration(
+          color: const Color(0xFF401C48),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Row(
+          children: [
+            const SizedBox(width: 12.0),
+            Icon(
+              widget.icon,
+              color: const Color(0xFFD88090),
+            ),
+            const SizedBox(width: 12.0),
+            Text(
               widget.label,
               style: const TextStyle(
                 color: Color(0xFFECD7D8),
@@ -50,10 +51,10 @@ class _ButtonState extends State<Button> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            onPressed: widget.onTap,
-          ),
-        ],
+          ],
+        ),
       ),
+      onTap: widget.onTap,
     );
   }
 }
