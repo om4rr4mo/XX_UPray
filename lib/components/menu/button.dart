@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/static_files/variables.dart';
 
 class MenuButton extends StatefulWidget {
   final double distance;
@@ -33,7 +34,7 @@ class _MenuButtonState extends State<MenuButton> {
         width: 324.5,
         decoration: BoxDecoration(
           color: const Color(0xFF401C48),
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(smallBorderRadius),
         ),
         child: Row(
           children: [

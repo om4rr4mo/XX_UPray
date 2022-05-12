@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/components/button.dart';
+import 'package:flutter_application_1/components/menu/button.dart';
+import 'package:flutter_application_1/static_files/variables.dart';
 
 class Menu extends StatefulWidget {
   final Widget fixedWidget;
@@ -34,9 +35,9 @@ class _MenuState extends State<Menu> {
                       width: 360.5,
                       decoration: BoxDecoration(
                         color: const Color(0xFF401C48).withOpacity(0.7),
-                        borderRadius: const BorderRadius.only(
-                            topLeft: Radius.circular(20),
-                            topRight: Radius.circular(20)),
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(bigBorderRadius),
+                            topRight: Radius.circular(bigBorderRadius)),
                       ),
                       child: Column(
                         children: [

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/components/expandible_contents/home/prayer_collapsed.dart';
+import 'package:flutter_application_1/components/expandible_contents/home/prayer_expanded.dart';
 import 'package:flutter_application_1/static_files/variables.dart';
 
 import '../components/expandible_container.dart';
-import '../components/expandible_contents/menu.dart';
+import '../components/menu/menu.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -28,12 +30,18 @@ class _HomeState extends State<Home> {
           },
           borderRadius: bigBorderRadius,
           collapsed: prayerCollapsed,
-          collapsedHeight: MediaQuery.of(context).size.height * 0.25,
-          expandedHeight: MediaQuery.of(context).size.height * 0.50,
+          collapsedHeight: MediaQuery.of(context).size.height * 0.19,
+          expandedHeight: MediaQuery.of(context).size.height * 0.44,
           width: MediaQuery.of(context).size.width,
           bgColor: const Color(0xFFF48FB1),
-          collapsedContent: Container(),
-          expandedContent: Container(),
+          collapsedContent: PrayerCollapsed(
+            prayerName: "Fajr",
+            prayerTime: "05:24",
+            nextPrayer: "05 h 12m 4s",
+            notificationStatus: Icons.add_alert,
+            onTap: () {},
+          ),
+          expandedContent: const PrayerExpanded(),
         ),
         const SizedBox(
           height: 20,
@@ -58,7 +66,7 @@ class _HomeState extends State<Home> {
           expandedContent: Container(),
         ),
         const SizedBox(
-          height: 64.0,
+          height: 110,
         ),
       ]),
     );
