@@ -42,7 +42,7 @@ class _ExpandibleContainerState extends State<ExpandibleContainer> {
     return GestureDetector(
       onTap: widget.onTap,
       child: AnimatedContainer(
-        duration: Duration(milliseconds: 500),
+        duration: const Duration(milliseconds: 500),
         height:
             widget.collapsed ? widget.collapsedHeight : widget.expandedHeight,
         width: widget.width,

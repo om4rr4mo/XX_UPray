@@ -26,7 +26,7 @@ class _ImpostazioniState extends State<Impostazioni> {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           //Container per la scelta del madhab
@@ -41,16 +41,16 @@ class _ImpostazioniState extends State<Impostazioni> {
               });
             },
             child: AnimatedContainer(
-              duration: Duration(milliseconds: 500),
+              duration: const Duration(milliseconds: 500),
               height: madhabCollapsed
                   ? MediaQuery.of(context).size.height * 0.12
                   : MediaQuery.of(context).size.height * 0.21,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
-                color: Color(0xFFDF888F),
+                color: const Color(0xFFDF888F),
                 borderRadius: BorderRadius.circular(bigBorderRadius),
               ),
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               curve: Curves.fastOutSlowIn,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -59,19 +59,19 @@ class _ImpostazioniState extends State<Impostazioni> {
                     firstChild: Container(
                       width: 500,
                       alignment: Alignment.center,
-                      child: Text("Madhab"),
+                      child: const Text("Madhab"),
                     ),
                     secondChild: Container(
                       width: 500,
                       alignment: Alignment.center,
-                      child: Text("Seleziona il madhab"),
+                      child: const Text("Seleziona il madhab"),
                     ),
                     crossFadeState: madhabCollapsed
                         ? CrossFadeState.showFirst
                         : CrossFadeState.showSecond,
-                    duration: Duration(milliseconds: 200),
+                    duration: const Duration(milliseconds: 200),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   ExpandibleContainer(
@@ -89,15 +89,15 @@ class _ImpostazioniState extends State<Impostazioni> {
                     collapsedHeight: MediaQuery.of(context).size.height * 0.06,
                     expandedHeight: MediaQuery.of(context).size.height * 0.15,
                     width: MediaQuery.of(context).size.width,
-                    bgColor: Color(0xFFF9E8E0),
-                    collapsedContent: MadhabCollapsed(),
-                    expandedContent: MadhabExpanded(),
+                    bgColor: const Color(0xFFF9E8E0),
+                    collapsedContent: const MadhabCollapsed(),
+                    expandedContent: const MadhabExpanded(),
                   ),
                 ],
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           //Container per la scelta del metodo di calcolo
@@ -112,16 +112,16 @@ class _ImpostazioniState extends State<Impostazioni> {
               });
             },
             child: AnimatedContainer(
-              duration: Duration(milliseconds: 500),
+              duration: const Duration(milliseconds: 500),
               height: calculationMethodCollapsed
                   ? MediaQuery.of(context).size.height * 0.12
                   : MediaQuery.of(context).size.height * 0.31,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
-                color: Color(0xFFDF888F),
+                color: const Color(0xFFDF888F),
                 borderRadius: BorderRadius.circular(bigBorderRadius),
               ),
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               curve: Curves.fastOutSlowIn,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -130,19 +130,19 @@ class _ImpostazioniState extends State<Impostazioni> {
                     firstChild: Container(
                       width: 500,
                       alignment: Alignment.center,
-                      child: Text("Metodo di calcolo"),
+                      child: const Text("Metodo di calcolo"),
                     ),
                     secondChild: Container(
                       width: 500,
                       alignment: Alignment.center,
-                      child: Text("Seleziona il metodo di calcolo"),
+                      child: const Text("Seleziona il metodo di calcolo"),
                     ),
                     crossFadeState: madhabCollapsed
                         ? CrossFadeState.showFirst
                         : CrossFadeState.showSecond,
-                    duration: Duration(milliseconds: 200),
+                    duration: const Duration(milliseconds: 200),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   ExpandibleContainer(
@@ -161,15 +161,15 @@ class _ImpostazioniState extends State<Impostazioni> {
                     collapsedHeight: MediaQuery.of(context).size.height * 0.06,
                     expandedHeight: MediaQuery.of(context).size.height * 0.25,
                     width: MediaQuery.of(context).size.width,
-                    bgColor: Color(0xFFF9E8E0),
-                    collapsedContent: CalcMethodCollapsed(),
-                    expandedContent: CalcMethodExpanded(),
+                    bgColor: const Color(0xFFF9E8E0),
+                    collapsedContent: const CalcMethodCollapsed(),
+                    expandedContent: const CalcMethodExpanded(),
                   ),
                 ],
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           //Container per la scelta della lingua
@@ -184,16 +184,16 @@ class _ImpostazioniState extends State<Impostazioni> {
               });
             },
             child: AnimatedContainer(
-              duration: Duration(milliseconds: 500),
+              duration: const Duration(milliseconds: 500),
               height: languageCollapsed
                   ? MediaQuery.of(context).size.height * 0.12
                   : MediaQuery.of(context).size.height * 0.31,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
-                color: Color(0xFFDF888F),
+                color: const Color(0xFFDF888F),
                 borderRadius: BorderRadius.circular(bigBorderRadius),
               ),
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               curve: Curves.fastOutSlowIn,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -202,19 +202,19 @@ class _ImpostazioniState extends State<Impostazioni> {
                     firstChild: Container(
                       width: 500,
                       alignment: Alignment.center,
-                      child: Text("Lingua"),
+                      child: const Text("Lingua"),
                     ),
                     secondChild: Container(
                       width: 500,
                       alignment: Alignment.center,
-                      child: Text("Seleziona la lingua"),
+                      child: const Text("Seleziona la lingua"),
                     ),
                     crossFadeState: madhabCollapsed
                         ? CrossFadeState.showFirst
                         : CrossFadeState.showSecond,
-                    duration: Duration(milliseconds: 200),
+                    duration: const Duration(milliseconds: 200),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   ExpandibleContainer(
@@ -232,9 +232,9 @@ class _ImpostazioniState extends State<Impostazioni> {
                     collapsedHeight: MediaQuery.of(context).size.height * 0.06,
                     expandedHeight: MediaQuery.of(context).size.height * 0.25,
                     width: MediaQuery.of(context).size.width,
-                    bgColor: Color(0xFFF9E8E0),
-                    collapsedContent: LanguageCollapsed(),
-                    expandedContent: LanguageExpanded(),
+                    bgColor: const Color(0xFFF9E8E0),
+                    collapsedContent: const LanguageCollapsed(),
+                    expandedContent: const LanguageExpanded(),
                   ),
                 ],
               ),

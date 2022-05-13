@@ -13,7 +13,7 @@ class _MadhabExpandedState extends State<MadhabExpanded> {
   Widget build(BuildContext context) {
     return Center(
       child: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         child: Column(
           children: [
             Column(
@@ -32,15 +32,15 @@ class _MadhabExpandedState extends State<MadhabExpanded> {
                       decoration: BoxDecoration(
                         border: classType.name == currentMadhab.name
                             ? null
-                            : Border.all(color: Color(0xFF8D4EAC), width: 2),
+                            : Border.all(color: const Color(0xFF8D4EAC), width: 2),
                         color: classType.name == currentMadhab.name
-                            ? Color(0xFF8D4EAC)
-                            : Color(0x008D4EAC),
+                            ? const Color(0xFF8D4EAC)
+                            : const Color(0x008D4EAC),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       width: 400,
                       height: 40,
-                      duration: Duration(milliseconds: 200),
+                      duration: const Duration(milliseconds: 200),
                       child: Text(classType.name),
                     ),
                   ),
